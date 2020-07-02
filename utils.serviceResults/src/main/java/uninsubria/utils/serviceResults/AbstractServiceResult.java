@@ -1,0 +1,93 @@
+package uninsubria.utils.serviceResults;
+
+import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
+
+/**
+ * Abstract class for ServiceResult objects.
+ * @author Giulia Pais
+ * @version 0.9.0
+ */
+public abstract class AbstractServiceResult implements ServiceResultInterface {
+	/*---Fields---*/
+	
+	/**
+	 * The serial version UID
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
+	 * The name of this ServiceResult
+	 */
+	protected String name;
+	/**
+	 * The list of results
+	 */
+	private List<Result<?>> resultList;
+	
+	
+	/*---Constructors---*/
+	/**
+	 * Returns an object of type AbstractServiceResult. Can't be called directly.
+	 * @param name the name of this ServiceResult
+	 */
+	protected AbstractServiceResult(String name) {
+		this.name = name;
+		this.resultList = new ArrayList<>(5);
+	}
+	/**
+	 * Returns an object of type AbstractServiceResult. Can't be called directly.
+	 * @param name name the name of this ServiceResult
+	 * @param resList the list of results
+	 */
+	protected AbstractServiceResult(String name, List<Result<?>> resList) {
+		this.name = name;
+		this.resultList = resList;
+	}
+	
+	
+	/*---Methods---*/
+	
+	@Override
+	public String getName() {
+		return this.name;
+	}
+	
+	@Override
+	public List<Result<?>> getResultList() {
+		return this.resultList;
+	}
+
+	@Override
+	public void addResult(Result<?> res) {
+		if (!resultList.contains(res)) {
+			resultList.add(res);
+		}
+	}
+
+	@Override
+	public <T extends Serializable> void addResult(String name, T value) {
+		Result<T> res = new Result<>(name, value);
+		if (!resultList.contains(res)) {
+			resultList.add(res);
+		}
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (!(obj instanceof AbstractServiceResult))
+			return false;
+		AbstractServiceResult other = (AbstractServiceResult) obj;
+		return Objects.equals(name, other.name);
+	}
+
+	
+}
