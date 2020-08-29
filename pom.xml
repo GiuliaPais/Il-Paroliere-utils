@@ -28,5 +28,6 @@
   </build>
   <modules>
     <module>utils.serviceResults</module>
+    <module>utils.languages</module>
   </modules>
 </project>
