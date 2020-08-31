@@ -10,7 +10,8 @@ import java.util.List;
  */
 enum ValidType {
 	/*---Enum constants---*/
-	ITALIAN("Aggettivo", "Verbo", "Sostantivo maschile", "Sostantivo femminile");
+	ITALIAN("Aggettivo", "Verbo", "Sostantivo maschile", "Sostantivo femminile"), 
+	ENGLISH("Adjective", "Noun", "Verb");
 	
 	/*---Fields---*/
 	/**

@@ -1,7 +1,7 @@
 package uninsubria.utils.languages;
 
 import java.util.Arrays;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.List;
 import java.util.ListIterator;
 
@@ -13,13 +13,14 @@ import java.util.ListIterator;
  */
 enum TermTypesAbbreviations {
 	/*---Enum constants---*/
-	ITALIAN(TermType.ITALIAN, "agg.", "v.", "s.m.", "s.f.", "avv.", "cong.", "prep.", "inter.");
+	ITALIAN(TermType.ITALIAN, "agg.", "v.", "s.m.", "s.f.", "avv.", "cong.", "prep.", "inter."), 
+	ENGLISH(TermType.ENGLISH, "adj", "adv", "noun", "verb");
 	
 	/*---Fields---*/
 	/**
 	 * Internal structure holding a pair key-value where keys are abbreviations and values are corresponding types.
 	 */
-	private Hashtable<String, String> abbrev;
+	private HashMap<String, String> abbrev;
 	
 	/*---Constructor---*/
 	/**
@@ -29,7 +30,7 @@ enum TermTypesAbbreviations {
 	 */
 	TermTypesAbbreviations(TermType tType, String...abb) {
 		List<String> abbr = Arrays.asList(abb);
-		abbrev = new Hashtable<String, String>(abb.length, 1.0f);
+		abbrev = new HashMap<String, String>(abb.length, 1.0f);
 		ListIterator<String> iter = tType.getWordTypes().listIterator();
 		for (String a : abbr) {
 			abbrev.put(a, iter.next());
@@ -41,7 +42,7 @@ enum TermTypesAbbreviations {
 	 * Returns the value of abbrev field.
 	 * @return The value of abbrev field
 	 */
-	public Hashtable<String, String> getAbbreviations() {
+	public HashMap<String, String> getAbbreviations() {
 		return this.abbrev;
 	}
 }

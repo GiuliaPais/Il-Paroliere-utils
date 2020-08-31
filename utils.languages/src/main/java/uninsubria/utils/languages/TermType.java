@@ -12,7 +12,8 @@ import java.util.List;
 enum TermType {
 	/*---Enum constants---*/
 	ITALIAN("Altro","Aggettivo", "Verbo", "Sostantivo maschile", "Sostantivo femminile", "Avverbio", "Congiunzione", "Preposizione", 
-			"Interiezione");
+			"Interiezione"), 
+	ENGLISH("Other", "Adjective", "Adverb", "Noun", "Verb");
 	
 	/*---Fields---*/
 	/**

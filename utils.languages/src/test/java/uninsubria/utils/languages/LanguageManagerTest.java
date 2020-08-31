@@ -8,8 +8,8 @@ import static org.junit.jupiter.api.Assertions.*;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Hashtable;
 import java.util.List;
 import java.util.Set;
 
@@ -31,7 +31,7 @@ class LanguageManagerTest {
 	
 	@Test
 	public void testGetAbbreviations() {
-		Hashtable<String, String> ht = lman.getAbbreviations();
+		HashMap<String, String> ht = lman.getAbbreviations();
 		assertNotNull(ht);
 		List<String> l = Arrays.asList("agg.", "v.", "s.m.", "s.f.", "avv.", "cong.", "prep.", "inter.");
 		Set<String> expected = new HashSet<>(l);

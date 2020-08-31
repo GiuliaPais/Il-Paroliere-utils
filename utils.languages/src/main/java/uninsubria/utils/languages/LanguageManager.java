@@ -3,7 +3,8 @@ package uninsubria.utils.languages;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
-import java.util.Hashtable;
+import java.nio.charset.Charset;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -60,7 +61,7 @@ public class LanguageManager {
 	 * corresponding term types.
 	 * @return The abbreviations table
 	 */
-	public Hashtable<String, String> getAbbreviations() {
+	public HashMap<String, String> getAbbreviations() {
 		return lang.getAbbreviations().getAbbreviations();
 	}
 	
@@ -86,5 +87,12 @@ public class LanguageManager {
 	 */
 	public List<String> getValidTypes() {
 		return lang.getValidType().getValidTypes();
+	}
+	/**
+	 * Gets the encoding used in the dictionary file for the language.
+	 * @return The encoding charset
+	 */
+	public Charset getDictEncoding() {
+		return lang.getEncoding();
 	}
 }
