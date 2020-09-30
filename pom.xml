@@ -11,6 +11,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>14</maven.compiler.source>
         <maven.compiler.target>14</maven.compiler.target>
+        <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
   
   <build>
@@ -29,5 +30,14 @@
   <modules>
     <module>utils.serviceResults</module>
     <module>utils.languages</module>
+    <module>utils.dictionary</module>
   </modules>
+  
+  <distributionManagement>
+   <repository>
+     <id>github</id>
+     <name>GitHub GiuliaPais Apache Maven Packages</name>
+     <url>https://maven.pkg.github.com/GiuliaPais/Il-Paroliere-utils</url>
+   </repository>
+</distributionManagement>
 </project>
