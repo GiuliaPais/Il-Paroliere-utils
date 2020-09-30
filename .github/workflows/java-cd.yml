@@ -17,7 +17,6 @@ jobs:
             GITHUB_USERNAME: GiuliaPais
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          run: |-
-            mkdir ~/.m2
             echo "<servers>
             <server>
             <id>github</id>
