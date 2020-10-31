@@ -2,18 +2,21 @@ package uninsubria.utils.languages;
 
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.util.Locale;
 
 /**
  * Enumerative class containing supported languages and references to files and objects for each one.
  * 
  * @author Giulia Pais
- * @version 0.9.0
+ * @version 0.9.1
  *
  */
 public enum Language {
 	/*---Enum constants---*/
-	ITALIAN("/dictionaries/th_it_IT_v2.dat", StandardCharsets.ISO_8859_1, TermType.ITALIAN, ValidType.ITALIAN, TermTypesAbbreviations.ITALIAN),
-	ENGLISH("/dictionaries/th_en_US_v2.dat", StandardCharsets.UTF_8, TermType.ENGLISH, ValidType.ENGLISH, TermTypesAbbreviations.ENGLISH);
+	ITALIAN("/dictionaries/th_it_IT_v2.dat", StandardCharsets.ISO_8859_1, TermType.ITALIAN, ValidType.ITALIAN, TermTypesAbbreviations.ITALIAN,
+			"it"),
+	ENGLISH("/dictionaries/th_en_US_v2.dat", StandardCharsets.UTF_8, TermType.ENGLISH, ValidType.ENGLISH, TermTypesAbbreviations.ENGLISH,
+			"en");
 	
 	/*---Fields---*/
 	/**
@@ -37,6 +40,7 @@ public enum Language {
 	 */
 	private TermTypesAbbreviations abbreviations;
 	
+	private String localeID;
 	/*---Constructor---*/
 	/**
 	 * Instantiates an object of type Language
@@ -46,12 +50,13 @@ public enum Language {
 	 * @param validTypes Reference to the ValidType object related to this language
 	 * @param abbrev Reference to the TermTypesAbbreviations object related to this language
 	 */
-	Language(String dictionary, Charset encoding, TermType wordTypes, ValidType validTypes, TermTypesAbbreviations abbrev) {
+	Language(String dictionary, Charset encoding, TermType wordTypes, ValidType validTypes, TermTypesAbbreviations abbrev, String localeID) {
 		this.dict = dictionary;
 		this.encoding = encoding;
 		this.termTypes = wordTypes;
 		this.validTypes = validTypes;
 		this.abbreviations = abbrev;
+		this.localeID = localeID;
 	}
 	
 	/*---Methods---*/
@@ -83,11 +88,20 @@ public enum Language {
 	TermTypesAbbreviations getAbbreviations() {
 		return this.abbreviations;
 	}
+	
 	/**
 	 * Returns the value of encoding field.
 	 * @return The value of encoding field.
 	 */
 	Charset getEncoding() {
 		return this.encoding;
+	}
+	
+	/**
+	 * Returns the Locale associated with this language.
+	 * @return A Locale object
+	 */
+	Locale getLocale() {
+		return new Locale(this.localeID);
 	}
 }

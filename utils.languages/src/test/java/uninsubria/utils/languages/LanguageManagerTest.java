@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
+import java.util.ResourceBundle;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
@@ -65,5 +66,14 @@ class LanguageManagerTest {
 		List<String> types = lman.getValidTypes();
 		List<String> l = Arrays.asList("Aggettivo", "Verbo", "Sostantivo maschile", "Sostantivo femminile");
 		assertEquals(types, l);
+	}
+	
+	@Test
+	public void testGetResourceBundle() {
+		ResourceBundle res = lman.getResourcesBundle();
+		assertEquals(res.getString("exit_btn"), "Esci");
+		assertEquals(res.getString("opt_btn"), "Opzioni");
+		assertEquals(res.getString("register_btn"), "Nuovo giocatore");
+		assertEquals(res.getString("login_btn"), "Login");
 	}
 }

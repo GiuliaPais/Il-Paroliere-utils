@@ -6,11 +6,13 @@ import java.net.URL;
 import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Class that acts as an interface for client modules.
  * @author Giulia Pais
- * @version 0.9.0
+ * @version 0.9.1
  *
  */
 public class LanguageManager {
@@ -88,11 +90,38 @@ public class LanguageManager {
 	public List<String> getValidTypes() {
 		return lang.getValidType().getValidTypes();
 	}
+	
 	/**
 	 * Gets the encoding used in the dictionary file for the language.
 	 * @return The encoding charset
 	 */
 	public Charset getDictEncoding() {
 		return lang.getEncoding();
+	}
+	
+	/**
+	 * Builds the resource bundle for the GUI localization.
+	 * @return A ResourceBundle object
+	 */
+	public ResourceBundle getResourcesBundle() {
+		Locale loc = lang.getLocale();
+		ResourceBundle res = ResourceBundle.getBundle("gui_localization.guitext", loc);
+		return res;
+	}
+
+	/**
+	 * Gets the current value of lang.
+	 * @return The value of lang
+	 */
+	public Language getLang() {
+		return lang;
+	}
+
+	/**
+	 * Sets the value of lang.
+	 * @param lang A Language constant.
+	 */
+	public void setLang(Language lang) {
+		this.lang = lang;
 	}
 }
