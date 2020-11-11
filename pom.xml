@@ -3,7 +3,7 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>it.uninsubria.labB717304</groupId>
-  <artifactId>utilisIP</artifactId>
+  <artifactId>utilsIP</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
     
@@ -28,9 +28,12 @@
     </plugins>
   </build>
   <modules>
-    <module>utils.serviceResults</module>
+    <module>utils.serviceresults</module>
     <module>utils.languages</module>
     <module>utils.dictionary</module>
+    <module>utils.managers.api</module>
+      <module>utils.connection</module>
+      <module>utils.business</module>
   </modules>
   
   <distributionManagement>
