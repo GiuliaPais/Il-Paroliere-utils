@@ -28,7 +28,7 @@
     </plugins>
   </build>
   <modules>
-    <module>utils.serviceresults</module>
+    <module>utils.serviceResults</module>
     <module>utils.languages</module>
     <module>utils.dictionary</module>
     <module>utils.managers.api</module>
