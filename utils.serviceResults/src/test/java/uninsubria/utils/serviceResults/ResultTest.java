@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import nl.jqno.equalsverifier.EqualsVerifier;
 
 class ResultTest {
 
@@ -14,9 +13,9 @@ class ResultTest {
 		assertEquals("value1", res.getValue());
 		assertEquals("test1", res.getName());
 	}
-	
-	@Test
-	void test_equalsHashcodeContract() {
-		EqualsVerifier.simple().forClass(Result.class).withOnlyTheseFields("name").verify();
-	}
+
+//	@Test
+//	void test_equalsHashcodeContract() {
+//		EqualsVerifier.simple().forClass(Result.class).withOnlyTheseFields("name").verify();
+//	}
 }

@@ -43,7 +43,7 @@ public class Player implements Serializable {
 	/**
 	 * The player log status
 	 */
-	private String log_Status;
+	private boolean logStatus;
 
 	/**
 	 * Instantiates a new Player.
@@ -61,7 +61,7 @@ public class Player implements Serializable {
 	 * @param profileImage The profile image code
 	 * @param log_Status   The log status
 	 */
-	public Player(String playerID, String email, String name, String surname, String password, int profileImage, String log_Status) {
+	public Player(String playerID, String email, String name, String surname, String password, int profileImage, boolean log_Status) {
 		super();
 		this.playerID = playerID;
 		this.email = email;
@@ -69,7 +69,7 @@ public class Player implements Serializable {
 		this.surname = surname;
 		this.password = password;
 		this.profileImage = profileImage;
-		this.log_Status = log_Status;
+		this.logStatus = log_Status;
 	}
 
 
@@ -202,20 +202,20 @@ public class Player implements Serializable {
 	}
 
 	/**
-	 * Gets log status.
+	 * Is log status boolean.
 	 *
-	 * @return the log status
+	 * @return the boolean
 	 */
-	public String getLog_Status() {
-		return log_Status;
+	public boolean isLogStatus() {
+		return logStatus;
 	}
 
 	/**
 	 * Sets log status.
 	 *
-	 * @param log_Status the log status
+	 * @param logStatus the log status
 	 */
-	public void setLog_Status(String log_Status) {
-		this.log_Status = log_Status;
+	public void setLogStatus(boolean logStatus) {
+		this.logStatus = logStatus;
 	}
 }

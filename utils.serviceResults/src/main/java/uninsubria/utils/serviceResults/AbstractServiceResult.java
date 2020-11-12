@@ -8,7 +8,7 @@ import java.util.Objects;
 /**
  * Abstract class for ServiceResult objects.
  * @author Giulia Pais
- * @version 0.9.0
+ * @version 0.9.1
  */
 public abstract class AbstractServiceResult implements ServiceResultInterface {
 	/*---Fields---*/
@@ -72,6 +72,16 @@ public abstract class AbstractServiceResult implements ServiceResultInterface {
 		if (!resultList.contains(res)) {
 			resultList.add(res);
 		}
+	}
+
+	@Override
+	public Result<?> getResult(String resultName) {
+		for (Result<?> res : resultList) {
+			if (res.getName().equals(resultName)) {
+				return res;
+			}
+		}
+		return null;
 	}
 
 	@Override
