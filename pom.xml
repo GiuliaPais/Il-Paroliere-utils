@@ -80,6 +80,7 @@
     <module>utils.managers.api</module>
       <module>utils.connection</module>
       <module>utils.business</module>
+      <module>utils.chronometer</module>
   </modules>
   
   <distributionManagement>
