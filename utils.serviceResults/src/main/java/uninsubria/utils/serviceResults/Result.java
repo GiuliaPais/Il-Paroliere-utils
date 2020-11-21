@@ -70,5 +70,12 @@ public class Result<T extends Serializable> implements Serializable {
 		Result<?> other = (Result<?>) obj;
 		return Objects.equals(name, other.name);
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Result{" +
+				"name='" + name + '\'' +
+				", value=" + value +
+				'}';
+	}
 }

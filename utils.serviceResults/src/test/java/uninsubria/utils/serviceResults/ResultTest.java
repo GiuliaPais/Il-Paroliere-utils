@@ -14,8 +14,4 @@ class ResultTest {
 		assertEquals("test1", res.getName());
 	}
 
-//	@Test
-//	void test_equalsHashcodeContract() {
-//		EqualsVerifier.simple().forClass(Result.class).withOnlyTheseFields("name").verify();
-//	}
 }

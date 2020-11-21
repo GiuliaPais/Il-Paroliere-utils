@@ -11,10 +11,6 @@ class ServiceResultTest {
 	
 	ServiceResult sr;
 
-//	@Test
-//	void test_EqualsHashcodeContract() {
-//		EqualsVerifier.simple().forClass(Result.class).withOnlyTheseFields("name").verify();
-//	}
 	
 	@Test
 	void test_addResWithResult() {

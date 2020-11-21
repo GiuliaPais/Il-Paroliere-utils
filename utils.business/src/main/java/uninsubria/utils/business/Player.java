@@ -218,4 +218,17 @@ public class Player implements Serializable {
 	public void setLogStatus(boolean logStatus) {
 		this.logStatus = logStatus;
 	}
+
+	@Override
+	public String toString() {
+		return "Player{" +
+				"playerID='" + playerID + '\'' +
+				", email='" + email + '\'' +
+				", name='" + name + '\'' +
+				", surname='" + surname + '\'' +
+				", password='" + password + '\'' +
+				", profileImage=" + profileImage +
+				", logStatus=" + logStatus +
+				'}';
+	}
 }

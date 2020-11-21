@@ -17,9 +17,5 @@ class ServiceResultAggregateTest {
 		assertEquals("SR1", agg.getComponents().get(0).getName());
 		assertEquals(sr, agg.getComponents().get(0));
 	}
-	
-//	@Test
-//	void test_equalsHashcodeContract() {
-//		EqualsVerifier.simple().forClass(Result.class).withOnlyTheseFields("name").verify();
-//	}
+
 }

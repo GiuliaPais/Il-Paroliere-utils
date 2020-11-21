@@ -33,5 +33,4 @@ public class ServiceResult extends AbstractServiceResult {
 	}
 	
 	/*---Methods---*/
-
 }

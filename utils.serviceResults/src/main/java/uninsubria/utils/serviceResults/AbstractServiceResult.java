@@ -99,5 +99,11 @@ public abstract class AbstractServiceResult implements ServiceResultInterface {
 		return Objects.equals(name, other.name);
 	}
 
-	
+	@Override
+	public String toString() {
+		return "AbstractServiceResult{" +
+				"name='" + name + '\'' +
+				", resultList=" + resultList +
+				'}';
+	}
 }
