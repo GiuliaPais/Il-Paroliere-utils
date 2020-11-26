@@ -1,26 +1,20 @@
 package uninsubria.utils.serviceResults;
 
 /**
+ * Enumerative class that contains possible errors raised during services execution.
+ * These are language localized on the client side.
+ *
  * @author Giulia Pais
- * @version 0.9.1
+ * @version 0.9.2
  */
 public enum ErrorMsgType {
     /*---Enum constants---*/
-    GENERIC_DB_ERROR("Can't communicate with database, an error occurred"),
-    LOGIN_ERR_NOMATCH("No user found with this id"),
-    LOGIN_ERR_PW("Password is incorrect"),
-    LOGIN_ERR_USER_ONLINE("User already logged in");
-
-    /*---Fields---*/
-    private String message;
-
-    /*---Constructors---*/
-    ErrorMsgType(String s) {
-        this.message = s;
-    }
-
-    /*---Methods---*/
-    public String getMessage() {
-        return message;
-    }
+    GENERIC_DB_ERROR,
+    REG_ERR_USERID,
+    REG_ERR_EMAIL,
+    REG_DUPL_REQUEST,
+    REG_EMAIL_FAILURE,
+    LOGIN_ERR_NOMATCH,
+    LOGIN_ERR_PW,
+    LOGIN_ERR_USER_ONLINE;
 }

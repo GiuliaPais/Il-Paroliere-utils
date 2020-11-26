@@ -36,26 +36,17 @@
 			<groupId>it.uninsubria.labB717304</groupId>
 			<artifactId>utils.serviceresults</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>org.junit.jupiter</groupId>
-			<artifactId>junit-jupiter</artifactId>
-			<version>5.6.0</version>
-		</dependency>
-		<dependency>
-			<groupId>nl.jqno.equalsverifier</groupId>
-			<artifactId>equalsverifier</artifactId>
-			<version>3.4.1</version>
-		</dependency>
-		<dependency>
-			<groupId>it.uninsubria.labB717304</groupId>
-			<artifactId>utils.serviceresults</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
 			<scope>compile</scope>
 		</dependency>
         <dependency>
             <groupId>it.uninsubria.labB717304</groupId>
             <artifactId>utils.business</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>it.uninsubria.labB717304</groupId>
+            <artifactId>utils.connection</artifactId>
             <version>0.0.1-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
