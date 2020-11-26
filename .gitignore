@@ -6,3 +6,11 @@
 /.idea/
 .idea
 /utils.security/utils.security.iml
+/utils.managers.api/utils.managers.api.iml
+/utilsIP.iml
+/utils.languages/utils.languages.iml
+/utils.dictionary/utils.dictionary.iml
+/utils.connection/utils.connection.iml
+/utils.chronometer/utils.chronometer.iml
+/utils.business/utils.business.iml
+/utils.serviceResults/utils.serviceresults.iml
