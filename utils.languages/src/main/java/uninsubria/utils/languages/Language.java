@@ -13,12 +13,16 @@ import java.util.Locale;
  */
 public enum Language {
 	/*---Enum constants---*/
-	ITALIAN("/dictionaries/th_it_IT_v2.dat", StandardCharsets.ISO_8859_1, TermType.ITALIAN, ValidType.ITALIAN, TermTypesAbbreviations.ITALIAN,
+	ITALIAN("Italian","/dictionaries/th_it_IT_v2.dat", StandardCharsets.ISO_8859_1, TermType.ITALIAN, ValidType.ITALIAN, TermTypesAbbreviations.ITALIAN,
 			"it"),
-	ENGLISH("/dictionaries/th_en_US_v2.dat", StandardCharsets.UTF_8, TermType.ENGLISH, ValidType.ENGLISH, TermTypesAbbreviations.ENGLISH,
+	ENGLISH("English","/dictionaries/th_en_US_v2.dat", StandardCharsets.UTF_8, TermType.ENGLISH, ValidType.ENGLISH, TermTypesAbbreviations.ENGLISH,
 			"en");
 	
 	/*---Fields---*/
+	/**
+	 * The name of the language.
+	 */
+	private String language;
 	/**
 	 * Path to the dictionary file.
 	 */
@@ -44,13 +48,15 @@ public enum Language {
 	/*---Constructor---*/
 	/**
 	 * Instantiates an object of type Language
+	 * @param language The name of the language
 	 * @param dictionary Path to the dictionary file
 	 * @param encoding Encoding type for the dictionary file
 	 * @param wordTypes Reference to the TermType object related to this language
 	 * @param validTypes Reference to the ValidType object related to this language
 	 * @param abbrev Reference to the TermTypesAbbreviations object related to this language
 	 */
-	Language(String dictionary, Charset encoding, TermType wordTypes, ValidType validTypes, TermTypesAbbreviations abbrev, String localeID) {
+	Language(String language, String dictionary, Charset encoding, TermType wordTypes, ValidType validTypes, TermTypesAbbreviations abbrev, String localeID) {
+		this.language = language;
 		this.dict = dictionary;
 		this.encoding = encoding;
 		this.termTypes = wordTypes;
@@ -60,6 +66,13 @@ public enum Language {
 	}
 	
 	/*---Methods---*/
+	/**
+	 * Returns the value of language field.
+	 * @return The value of language field.
+	 */
+	public String getLanguage() {
+		return language;
+	}
 	/**
 	 * Returns the value of dict field.
 	 * @return The value of dict field

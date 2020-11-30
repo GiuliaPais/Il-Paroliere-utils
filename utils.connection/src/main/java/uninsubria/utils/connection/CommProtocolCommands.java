@@ -9,10 +9,14 @@ package uninsubria.utils.connection;
 public enum CommProtocolCommands {
     /*---Enum constants---*/
     ACTIVATION_CODE,
-    QUIT;
+    QUIT,
+    SEND_GRID,
+    SEND_WORDS,
+    SEND_SCORE,
+    SET_SYNC;
 
     /*---Fields---*/
-    private String command;
+    private final String command;
 
     /*---Constructors---*/
     CommProtocolCommands() {
