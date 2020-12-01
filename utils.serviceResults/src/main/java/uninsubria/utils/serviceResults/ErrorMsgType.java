@@ -5,7 +5,7 @@ package uninsubria.utils.serviceResults;
  * These are language localized on the client side.
  *
  * @author Giulia Pais
- * @version 0.9.2
+ * @version 0.9.3
  */
 public enum ErrorMsgType {
     /*---Enum constants---*/
@@ -14,6 +14,9 @@ public enum ErrorMsgType {
     REG_ERR_EMAIL,
     REG_DUPL_REQUEST,
     REG_EMAIL_FAILURE,
+    REG_NO_REQUEST_FOUND,
+    REG_CODE_WRONG,
+    REG_CODE_EXPIRED,
     LOGIN_ERR_NOMATCH,
     LOGIN_ERR_PW,
     LOGIN_ERR_USER_ONLINE;

@@ -36,6 +36,7 @@
       <module>utils.business</module>
       <module>utils.chronometer</module>
       <module>utils.security</module>
+      <module>utils.ruleset</module>
   </modules>
   
   <distributionManagement>

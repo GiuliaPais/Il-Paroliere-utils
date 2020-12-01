@@ -17,5 +17,7 @@ import java.util.ArrayList;
  */
 public interface PlayerManagerInterface {
     public ServiceResultInterface requestActivationCode(String name, String lastname, String userID, String email, String password) throws IOException;
-    public Player login(String user, String pw);
+    public ServiceResultInterface confirmActivationCode(String email, String code) throws IOException;
+    public ServiceResultInterface resendConde(String email, String requestType) throws IOException;
+    public ServiceResultInterface login(String user, String pw) throws IOException;
 }
