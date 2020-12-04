@@ -1,6 +1,3 @@
-/**
- * 
- */
 package uninsubria.utils.business;
 
 
@@ -11,15 +8,9 @@ import java.io.Serializable;
  *
  * @author Alessandro Lerro
  * @author Giulia Pais
+ * @version 0.9.2
  */
 public class Player implements Serializable {
-	/* Modifiche di @Giulia:
-	* - Spostata classe Player da server.database a utils.business (serve sia lato client che server)
-	* - Aggiunta interfaccia Serializable
-	* - Corretti typo (nomi variabili in maiuscolo)
-	* - Rimosso campo PlayerManager (al momento non serve)
-	* - Sistemata documentazione
-	* */
 	/**
 	 * The serial version UID
 	 */
@@ -44,6 +35,14 @@ public class Player implements Serializable {
 	 * The player log status
 	 */
 	private boolean logStatus;
+	/**
+	 * The hex string representing the color of the profile image
+	 */
+	private String imgColor;
+	/**
+	 * The hex string representing the color of the background in the profile image
+	 */
+	private String bgColor;
 
 	/**
 	 * Instantiates a new Player.
@@ -60,9 +59,11 @@ public class Player implements Serializable {
 	 * @param password     The password (hashed)
 	 * @param profileImage The profile image code
 	 * @param log_Status   The log status
+	 * @param imgColor     the img color
+	 * @param bgColor      the bg color
 	 */
-	public Player(String playerID, String email, String name, String surname, String password, int profileImage, boolean log_Status) {
-		super();
+	public Player(String playerID, String email, String name, String surname, String password,
+				  int profileImage, boolean log_Status, String imgColor, String bgColor) {
 		this.playerID = playerID;
 		this.email = email;
 		this.name = name;
@@ -70,6 +71,8 @@ public class Player implements Serializable {
 		this.password = password;
 		this.profileImage = profileImage;
 		this.logStatus = log_Status;
+		this.imgColor = imgColor;
+		this.bgColor = bgColor;
 	}
 
 
@@ -84,7 +87,6 @@ public class Player implements Serializable {
 	 * @param profileImage The profile image code
 	 */
 	protected Player(String playerID, String email, String name, String surname, String password, int profileImage) {
-		super();
 		this.playerID = playerID;
 		this.email = email;
 		this.name = name;
@@ -217,6 +219,42 @@ public class Player implements Serializable {
 	 */
 	public void setLogStatus(boolean logStatus) {
 		this.logStatus = logStatus;
+	}
+
+	/**
+	 * Gets img color.
+	 *
+	 * @return the img color
+	 */
+	public String getImgColor() {
+		return imgColor;
+	}
+
+	/**
+	 * Sets img color.
+	 *
+	 * @param imgColor the img color
+	 */
+	public void setImgColor(String imgColor) {
+		this.imgColor = imgColor;
+	}
+
+	/**
+	 * Gets bg color.
+	 *
+	 * @return the bg color
+	 */
+	public String getBgColor() {
+		return bgColor;
+	}
+
+	/**
+	 * Sets bg color.
+	 *
+	 * @param bgColor the bg color
+	 */
+	public void setBgColor(String bgColor) {
+		this.bgColor = bgColor;
 	}
 
 	@Override

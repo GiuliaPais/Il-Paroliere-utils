@@ -12,6 +12,7 @@ public enum CommProtocolCommands {
     CONFIRM_ACTIVATION_CODE,
     RESEND_CODE,
     LOGIN,
+    LOGOUT,
     QUIT,
     SEND_GRID,
     SEND_WORDS,
