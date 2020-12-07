@@ -17,7 +17,9 @@ public enum CommProtocolCommands {
     SEND_GRID,
     SEND_WORDS,
     SEND_SCORE,
-    SET_SYNC;
+    SET_SYNC,
+    PING_SERVER,
+    END_GAME;
 
     /*---Fields---*/
     private final String command;
