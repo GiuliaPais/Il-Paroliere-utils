@@ -1,6 +1,7 @@
 package uninsubria.utils.managersAPI;
 
 
+import uninsubria.utils.business.Player;
 import uninsubria.utils.serviceResults.ServiceResultInterface;
 
 import java.io.IOException;
@@ -10,7 +11,7 @@ import java.io.IOException;
  * It should be implemented both on client and on server side.
  *
  * @author Giulia Pais
- * @version 0.9.2
+ * @version 0.9.3
  *
  */
 public interface PlayerManagerInterface {
@@ -19,4 +20,7 @@ public interface PlayerManagerInterface {
     ServiceResultInterface resendConde(String email, String requestType) throws IOException;
     ServiceResultInterface login(String user, String pw) throws IOException;
     void logout(String userid) throws IOException;
+    void updatePlayerInfo(Player player) throws IOException;
+    ServiceResultInterface changeUserId(String oldUserID, String newUserID) throws IOException;
+    ServiceResultInterface changePassword(String email, String oldPassword, String newPassword) throws IOException;
 }
