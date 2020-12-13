@@ -24,7 +24,8 @@ public enum CommProtocolCommands {
     RESET_PW,
     DELETE_PROFILE,
     PING_SERVER,
-    END_GAME;
+    END_GAME,
+    SEND_LIST;
 
     /*---Fields---*/
     private final String command;
