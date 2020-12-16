@@ -76,7 +76,7 @@ public class Counter {
      * con un valore più alto.
      * @return true se minuti, secondi e millisecondi hanno valore zero o minore. False altrimenti.
      */
-    public boolean isEnded() {
+    public boolean isZero() {
         if(this.toString().equals("00:00:00"))
             return true;
         else

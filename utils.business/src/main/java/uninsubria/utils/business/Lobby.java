@@ -37,6 +37,15 @@ public class Lobby implements Serializable {
         this.status = new SimpleObjectProperty<>(status);
     }
 
+    public Lobby(UUID roomId, String roomName, int numPlayers, Language language, Ruleset ruleset, LobbyStatus status) {
+        this.roomId = roomId;
+        this.roomName = new SimpleStringProperty(roomName);
+        this.numPlayers = new SimpleIntegerProperty(numPlayers);
+        this.language = new SimpleObjectProperty<>(language);
+        this.ruleset = new SimpleObjectProperty<>(ruleset);
+        this.status = new SimpleObjectProperty<>(status);
+    }
+
     /*---Methods---*/
     public UUID getRoomId() {
         return roomId;

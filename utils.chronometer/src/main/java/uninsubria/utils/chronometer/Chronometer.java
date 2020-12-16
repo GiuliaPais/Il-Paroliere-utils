@@ -2,7 +2,7 @@ package uninsubria.utils.chronometer;
 
 public class Chronometer extends Thread {
 
-    private final Counter counter;
+    private Counter counter;
     private boolean started;
 
     /*-----Constructor-----*/
@@ -15,7 +15,6 @@ public class Chronometer extends Thread {
      */
     public Chronometer(Counter c) {
         counter = c;
-        this.start();
     }
 
     /*-----Methods-----*/
@@ -24,10 +23,14 @@ public class Chronometer extends Thread {
     public void run() {
         started = true;
 
+        if(counter == null) {
+            counter = new Counter(0,0,0);
+        }
+
         while(started) {
             this.decrementMillis();
 
-            if(counter.isEnded())
+            if(counter.isZero())
                 this.interrupt();
         }
     }

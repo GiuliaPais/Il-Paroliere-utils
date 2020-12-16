@@ -19,5 +19,6 @@ public enum ErrorMsgType {
     REG_CODE_EXPIRED,
     LOGIN_ERR_NOMATCH,
     LOGIN_ERR_PW,
-    LOGIN_ERR_USER_ONLINE;
+    LOGIN_ERR_USER_ONLINE,
+    ROOM_FULL;
 }

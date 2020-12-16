@@ -1,6 +1,5 @@
 package uninsubria.utils.chronometer;
 
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -43,7 +42,7 @@ class CounterTest {
     @Test
     void isEnded() {
         test.decrementMin(6);
-        assertEquals(true, test.isEnded());
+        assertEquals(true, test.isZero());
     }
 
 }
