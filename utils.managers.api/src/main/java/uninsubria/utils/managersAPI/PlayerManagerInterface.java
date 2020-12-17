@@ -1,6 +1,7 @@
 package uninsubria.utils.managersAPI;
 
 
+import uninsubria.utils.business.Lobby;
 import uninsubria.utils.business.Player;
 import uninsubria.utils.serviceResults.ServiceResultInterface;
 
@@ -119,4 +120,6 @@ public interface PlayerManagerInterface {
      * @throws IOException the io exception
      */
     ServiceResultInterface deleteProfile(String id, String password) throws IOException;
+
+    boolean createRoom(Lobby lobby) throws IOException;
 }
