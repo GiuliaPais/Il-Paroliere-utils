@@ -6,13 +6,14 @@ import uninsubria.utils.business.Player;
 import uninsubria.utils.serviceResults.ServiceResultInterface;
 
 import java.io.IOException;
+import java.util.UUID;
 
 /**
  * This interface represents all the services that a player can request to the server.
  * It should be implemented both on client and on server side.
  *
  * @author Giulia Pais
- * @version 0.9.4
+ * @version 0.9.5
  */
 public interface PlayerManagerInterface {
     /**
@@ -121,5 +122,20 @@ public interface PlayerManagerInterface {
      */
     ServiceResultInterface deleteProfile(String id, String password) throws IOException;
 
+    /**
+     * Creates a new room on the RoomList.
+     *
+     * @param lobby the lobby
+     * @return true if correctly added
+     * @throws IOException the io exception
+     */
     boolean createRoom(Lobby lobby) throws IOException;
+
+    /**
+     * Lets a player exit from the room.
+     *
+     * @param roomID the room id
+     * @throws IOException the io exception
+     */
+    void leaveRoom(UUID roomID) throws IOException;
 }
