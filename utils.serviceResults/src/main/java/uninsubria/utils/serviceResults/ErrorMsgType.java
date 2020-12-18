@@ -5,7 +5,7 @@ package uninsubria.utils.serviceResults;
  * These are language localized on the client side.
  *
  * @author Giulia Pais
- * @version 0.9.3
+ * @version 0.9.4
  */
 public enum ErrorMsgType {
     /*---Enum constants---*/
@@ -20,5 +20,6 @@ public enum ErrorMsgType {
     LOGIN_ERR_NOMATCH,
     LOGIN_ERR_PW,
     LOGIN_ERR_USER_ONLINE,
-    ROOM_FULL;
+    ROOM_FULL,
+    ROOM_COMM_ERROR
 }
