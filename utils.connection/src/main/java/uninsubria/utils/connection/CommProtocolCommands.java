@@ -25,7 +25,7 @@ public enum CommProtocolCommands {
     DELETE_PROFILE,
     PING_SERVER,
     END_GAME,
-    SEND_ROOM_LIST;
+    SEND_LIST;
 
     /*---Fields---*/
     private final String command;

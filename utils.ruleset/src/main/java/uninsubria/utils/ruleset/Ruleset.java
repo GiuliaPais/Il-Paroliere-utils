@@ -9,6 +9,7 @@ package uninsubria.utils.ruleset;
 public enum Ruleset {
     //TODO
     /*---Enum constants---*/
+    STANDARD
     /*---Fields---*/
     /*---Constructors---*/
     /*---Methods---*/
