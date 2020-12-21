@@ -25,11 +25,6 @@
             <artifactId>utils.chronometer</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-        <dependency>
-            <groupId>it.uninsubria.labB717304</groupId>
-            <artifactId>utils.ruleset</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
     </dependencies>
 
     <build>
