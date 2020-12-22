@@ -11,17 +11,20 @@ import uninsubria.utils.chronometer.Counter;
 public enum Ruleset {
 
     /*---Enum constants---*/
-    STANDARD(new Counter(0, 30, 0), new Counter(3, 0, 0), true, 50);
+    STANDARD(new Counter(0, 30, 0), new Counter(3, 0, 0), new Counter(0, 10, 0),
+            true, 50);
 
     /*---Fields---*/
-    private Counter timeToStart, timeToMatch;
+    private Counter timeToStart, timeToMatch, timeToWaitFromMatchToMatch;
     private boolean interruptIfSomeoneLeaves;
     private int maxScoreToWin;
 
     /*---Constructors---*/
-    Ruleset(Counter timeToStart, Counter timeToMatch, boolean interruptIfSomeoneLeaves, int maxScoreToWin) {
+    Ruleset(Counter timeToStart, Counter timeToMatch, Counter timeToWaitFromMatchToMatch,
+            boolean interruptIfSomeoneLeaves, int maxScoreToWin) {
         this.timeToStart = timeToStart;
         this.timeToMatch = timeToMatch;
+        this.timeToWaitFromMatchToMatch = timeToWaitFromMatchToMatch;
         this.interruptIfSomeoneLeaves = interruptIfSomeoneLeaves;
         this.maxScoreToWin = maxScoreToWin;
     }
@@ -42,6 +45,12 @@ public enum Ruleset {
     public Counter getTimeToMatch() {
         return timeToMatch;
     }
+
+    /**
+     * Il timer che stabilisce l'attesa tra un match e l'altro.
+     * @return counter di attesa tra i match.
+     */
+    public Counter getTimeToWaitFromMatchToMatch() { return timeToWaitFromMatchToMatch; }
 
     /**
      * Il booleano che stabilisce se interrompere il gioco quando qualcuno abbandona o meno.

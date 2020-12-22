@@ -14,4 +14,5 @@ import java.io.IOException;
 public interface ProxySkeletonInterface {
     void writeCommand(CommProtocolCommands command, Object ... params) throws IOException;
     void readCommand(String command) throws IOException, ClassNotFoundException;
+    String[] readWords() throws IOException;
 }
