@@ -13,7 +13,7 @@ import java.util.UUID;
  * It should be implemented both on client and on server side.
  *
  * @author Giulia Pais
- * @version 0.9.6
+ * @version 0.9.7
  */
 public interface PlayerManagerInterface {
     /**
@@ -147,4 +147,21 @@ public interface PlayerManagerInterface {
      * @throws IOException the io exception
      */
     ServiceResultInterface joinRoom(UUID roomID) throws IOException;
+
+    /**
+     * Fetches statistics for display on the GUI.
+     *
+     * @return An object wrapping the result of the service execution
+     * @throws IOException the io exception
+     */
+    ServiceResultInterface fetchStatistics() throws IOException;
+
+    /**
+     * Fetches the statistics for a provided word.
+     *
+     * @param word the word
+     * @return An object wrapping the result of the service execution
+     * @throws IOException the io exception
+     */
+    ServiceResultInterface requestWordStats(String word) throws IOException;
 }

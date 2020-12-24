@@ -1,12 +1,13 @@
 package uninsubria.utils.managersAPI;
 
 import java.io.IOException;
+import java.util.HashMap;
 
 /**
  * Collection of methods that must be implemented by room proxies.
  *
  * @author Giulia Pais
- * @version 0.9.1
+ * @version 0.9.2
  */
 public interface RoomProxyInterface {
     /**
@@ -45,4 +46,8 @@ public interface RoomProxyInterface {
      * @throws IOException the io exception
      */
     void quit() throws IOException;
+
+    String[] readWords() throws IOException;
+    void sendGrid(String[] faces, Integer[] numbs) throws IOException;
+    void sendScores(HashMap<String, Integer> matchScores, HashMap<String, Integer> gameScores) throws IOException;
 }

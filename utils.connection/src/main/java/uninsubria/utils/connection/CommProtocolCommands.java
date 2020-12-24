@@ -4,7 +4,7 @@ package uninsubria.utils.connection;
  * Represents possible commands to send over a socket stream.
  *
  * @author Giulia Pais
- * @version 0.9.4
+ * @version 0.9.5
  */
 public enum CommProtocolCommands {
     /*---Enum constants---*/
@@ -29,7 +29,9 @@ public enum CommProtocolCommands {
     CREATE_ROOM,
     LEAVE_ROOM,
     SEND_PLIST,
-    JOIN_ROOM;
+    JOIN_ROOM,
+    FETCH_STATS,
+    WORD_STATS;
 
     /*---Fields---*/
     private final String command;

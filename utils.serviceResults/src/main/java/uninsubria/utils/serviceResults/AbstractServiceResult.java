@@ -8,11 +8,10 @@ import java.util.Objects;
 /**
  * Abstract class for ServiceResult objects.
  * @author Giulia Pais
- * @version 0.9.1
+ * @version 0.9.2
  */
 public abstract class AbstractServiceResult implements ServiceResultInterface {
 	/*---Fields---*/
-	
 	/**
 	 * The serial version UID
 	 */
@@ -48,7 +47,6 @@ public abstract class AbstractServiceResult implements ServiceResultInterface {
 	
 	
 	/*---Methods---*/
-	
 	@Override
 	public String getName() {
 		return this.name;
@@ -85,18 +83,16 @@ public abstract class AbstractServiceResult implements ServiceResultInterface {
 	}
 
 	@Override
-	public int hashCode() {
-		return Objects.hash(name);
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		AbstractServiceResult that = (AbstractServiceResult) o;
+		return name.equals(that.name);
 	}
 
 	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (!(obj instanceof AbstractServiceResult))
-			return false;
-		AbstractServiceResult other = (AbstractServiceResult) obj;
-		return Objects.equals(name, other.name);
+	public int hashCode() {
+		return Objects.hash(name);
 	}
 
 	@Override

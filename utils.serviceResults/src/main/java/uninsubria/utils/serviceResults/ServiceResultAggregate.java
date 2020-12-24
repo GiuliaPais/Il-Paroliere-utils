@@ -7,7 +7,7 @@ import java.util.List;
  * Concrete implementation of AbstractServiceResult. Represents an aggregate or a component in pattern Composite.
  * 
  * @author Giulia Pais
- * @version 0.9.0
+ * @version 0.9.1
  */
 public class ServiceResultAggregate extends AbstractServiceResult {
 	
@@ -19,7 +19,7 @@ public class ServiceResultAggregate extends AbstractServiceResult {
 	/**
 	 * The list of components of type ServiceResult
 	 */
-	private List<ServiceResult> components;
+	private List<ServiceResultInterface> components;
 	
 	/*---Constructors---*/
 	/**
@@ -45,7 +45,7 @@ public class ServiceResultAggregate extends AbstractServiceResult {
 	 * @param resultList the initial result list of this aggregate
 	 * @param components the initial components list of this aggregate
 	 */
-	public ServiceResultAggregate(String name, List<Result<?>> resultList, List<ServiceResult> components) {
+	public ServiceResultAggregate(String name, List<Result<?>> resultList, List<ServiceResultInterface> components) {
 		super(name, resultList);
 		this.components = components;
 	}
@@ -56,24 +56,48 @@ public class ServiceResultAggregate extends AbstractServiceResult {
 	 * Returns the component list of this aggregate
 	 * @return the value of the field components
 	 */
-	public List<ServiceResult> getComponents() {
+	public List<ServiceResultInterface> getComponents() {
 		return components;
 	}
+
 	/**
 	 * Sets the component list of this aggregate
 	 * @param components a list of components of type ServiceResult
 	 */
-	public void setComponents(List<ServiceResult> components) {
+	public void setComponents(List<ServiceResultInterface> components) {
 		this.components = components;
 	}
+
 	/**
 	 * Adds a component to the list
 	 * @param component a component of type ServiceResult
 	 */
-	public void addComponent(ServiceResult component) {
+	public void addComponent(ServiceResultInterface component) {
 		if (!components.contains(component)) {
 			components.add(component);
 		}
 	}
 
+	/**
+	 * Gets component by name.
+	 *
+	 * @param name the name
+	 * @return the component by name
+	 */
+	public ServiceResultInterface getComponentByName(String name) {
+		for (ServiceResultInterface res : components) {
+			if (res.getName().equals(name)) {
+				return res;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public String toString() {
+		return "ServiceResultAggregate{" +
+				"components=" + components +
+				", name='" + name + '\'' +
+				'}';
+	}
 }
