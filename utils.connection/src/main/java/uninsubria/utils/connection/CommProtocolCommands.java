@@ -31,7 +31,9 @@ public enum CommProtocolCommands {
     SEND_PLIST,
     JOIN_ROOM,
     FETCH_STATS,
-    WORD_STATS;
+    WORD_STATS,
+    GAME_STARTING,
+    INTERRUPT_GAME;
 
     /*---Fields---*/
     private final String command;
