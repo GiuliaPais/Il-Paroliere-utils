@@ -1,14 +1,12 @@
 package uninsubria.utils.ruleset;
 
-import uninsubria.utils.chronometer.Counter;
-
 import java.time.Duration;
 
 /**
  * Represents a set of rules for a game.
  *
  * @author Giulia Pais
- * @version 0.9.0
+ * @version 0.9.1
  */
 public enum Ruleset {
 
