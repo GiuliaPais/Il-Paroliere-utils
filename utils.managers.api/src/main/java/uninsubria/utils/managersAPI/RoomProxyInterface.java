@@ -67,7 +67,7 @@ public interface RoomProxyInterface {
      * @param numbs the numbs
      * @throws IOException the io exception
      */
-    void startNewMatch(String[] faces, Integer[] numbs) throws IOException;
+    void startNewMatch(String[] faces, Integer[] numbs) throws IOException, ClassNotFoundException;
 
     /**
      * Sets timeout match.
