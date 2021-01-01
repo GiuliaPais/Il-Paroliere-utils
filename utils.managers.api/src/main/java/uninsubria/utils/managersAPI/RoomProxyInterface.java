@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * Collection of methods that must be implemented by room proxies.
  *
  * @author Giulia Pais
- * @version 0.9.4
+ * @version 0.9.5
  */
 public interface RoomProxyInterface {
     /**
@@ -52,6 +52,13 @@ public interface RoomProxyInterface {
      * @throws IOException the io exception
      */
     void interruptGame() throws IOException;
+
+    /**
+     * Signals the current game has finished.
+     *
+     * @throws IOException the io exception
+     */
+    void endGame() throws IOException;
 
     /**
      * Start new match.
