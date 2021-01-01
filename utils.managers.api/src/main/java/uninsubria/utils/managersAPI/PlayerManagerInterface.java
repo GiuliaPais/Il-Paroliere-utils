@@ -164,4 +164,12 @@ public interface PlayerManagerInterface {
      * @throws IOException the io exception
      */
     ServiceResultInterface requestWordStats(String word) throws IOException;
+
+    /**
+     * Leaves the current game.
+     *
+     * @param roomID the room id
+     * @throws IOException the io exception
+     */
+    void leaveGame(UUID roomID) throws IOException;
 }
