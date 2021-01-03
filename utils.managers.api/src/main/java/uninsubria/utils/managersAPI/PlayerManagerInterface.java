@@ -13,7 +13,7 @@ import java.util.UUID;
  * It should be implemented both on client and on server side.
  *
  * @author Giulia Pais
- * @version 0.9.7
+ * @version 0.9.8
  */
 public interface PlayerManagerInterface {
     /**
@@ -172,4 +172,9 @@ public interface PlayerManagerInterface {
      * @throws IOException the io exception
      */
     void leaveGame(UUID roomID) throws IOException;
+
+    /**
+     * Signals the the Server that the player was kicked from the room due to connection issues.
+     */
+    void signalWasKicked() throws IOException;
 }

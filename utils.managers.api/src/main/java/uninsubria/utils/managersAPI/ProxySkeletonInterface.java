@@ -9,7 +9,7 @@ import java.io.IOException;
  * Proxy-Skeleton communication pattern. Mainly consists of methods that read and write on sockets.
  *
  * @author Giulia Pais
- * @version 0.9.1
+ * @version 0.9.2
  */
 public interface ProxySkeletonInterface {
     /**
@@ -30,5 +30,5 @@ public interface ProxySkeletonInterface {
      * @throws IOException            the io exception
      * @throws ClassNotFoundException the class not found exception
      */
-    void readCommand(String command) throws IOException, ClassNotFoundException;
+    void readCommand(String command) throws IOException, ClassNotFoundException, InterruptedException;
 }
