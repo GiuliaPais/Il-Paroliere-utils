@@ -22,6 +22,7 @@ public class Word implements Serializable {
         this.word = word;
         this.duplicated = duplicated;
         this.wrong = wrong;
+        this.points = points;
     }
 
     public Word() {

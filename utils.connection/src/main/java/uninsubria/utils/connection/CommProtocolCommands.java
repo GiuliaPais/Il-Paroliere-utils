@@ -4,7 +4,7 @@ package uninsubria.utils.connection;
  * Represents possible commands to send over a socket stream.
  *
  * @author Giulia Pais
- * @version 0.9.9
+ * @version 0.9.10
  */
 public enum CommProtocolCommands {
     /*---Enum constants---*/
@@ -36,7 +36,8 @@ public enum CommProtocolCommands {
     INTERRUPT_GAME,
     TIMEOUT_MATCH,
     LEAVE_GAME,
-    KICKED;
+    KICKED,
+    WORD_REQUEST;
 
     /*---Fields---*/
     private final String command;

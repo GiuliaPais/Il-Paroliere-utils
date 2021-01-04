@@ -3,6 +3,7 @@ package uninsubria.utils.managersAPI;
 
 import uninsubria.utils.business.Lobby;
 import uninsubria.utils.business.Player;
+import uninsubria.utils.languages.Language;
 import uninsubria.utils.serviceResults.ServiceResultInterface;
 
 import java.io.IOException;
@@ -13,7 +14,7 @@ import java.util.UUID;
  * It should be implemented both on client and on server side.
  *
  * @author Giulia Pais
- * @version 0.9.8
+ * @version 0.9.9
  */
 public interface PlayerManagerInterface {
     /**
@@ -177,4 +178,14 @@ public interface PlayerManagerInterface {
      * Signals the the Server that the player was kicked from the room due to connection issues.
      */
     void signalWasKicked() throws IOException;
+
+    /**
+     * Request words definitions.
+     *
+     * @param words    the words
+     * @param language the language
+     * @return the service result interface
+     * @throws IOException the io exception
+     */
+    ServiceResultInterface requestWordsDefinitions(String[] words, Language language) throws IOException;
 }
