@@ -7,7 +7,7 @@ import java.util.Hashtable;
  * Serializable representation of a score summary that can be sent over socket.
  *
  * @author Giulia Pais
- * @version 0.9.0
+ * @version 0.9.1
  */
 public class GameScore implements Serializable {
     /*---Fields---*/
@@ -42,5 +42,22 @@ public class GameScore implements Serializable {
 
     public void setWinner(String winner) {
         this.winner = winner;
+    }
+
+    public void setScores(Hashtable<String, Integer[]> scores) {
+        this.scores = scores;
+    }
+
+    public void setMatchWords(Hashtable<String, Word[]> matchWords) {
+        this.matchWords = matchWords;
+    }
+
+    @Override
+    public String toString() {
+        return "GameScore{\n" +
+                "scores=" + scores +
+                ", \nmatchWords=" + matchWords +
+                ", \nwinner='" + winner + '\'' +
+                '}';
     }
 }
