@@ -1,16 +1,18 @@
 package uninsubria.utils.managersAPI;
 
 import uninsubria.utils.business.GameScore;
+import uninsubria.utils.business.WordRequest;
 
 import java.io.IOException;
 import java.time.Instant;
 import java.util.ArrayList;
+import java.util.HashSet;
 
 /**
  * Collection of methods that must be implemented by room proxies.
  *
  * @author Giulia Pais
- * @version 0.9.5
+ * @version 0.9.6
  */
 public interface RoomProxyInterface {
     /**
@@ -54,11 +56,13 @@ public interface RoomProxyInterface {
     void interruptGame() throws IOException;
 
     /**
-     * Signals the current game has finished.
+     * Signals the current game has finished, returning the set of words that were
+     * requested by this player.
      *
      * @throws IOException the io exception
+     * @return A set of requested words
      */
-    void endGame() throws IOException;
+    HashSet<WordRequest> endGame() throws IOException, ClassNotFoundException;
 
     /**
      * Start new match.
