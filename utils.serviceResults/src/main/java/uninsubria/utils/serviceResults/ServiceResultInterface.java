@@ -21,12 +21,12 @@ public interface ServiceResultInterface extends Serializable {
 	 */
 	public List<Result<?>> getResultList();
 	/**
-	 * Adds an object of type Result<?> to the result list
-	 * @param res the Result<?> object to add
+	 * Adds an object of type Result to the result list
+	 * @param res the Result object to add
 	 */
 	public void addResult(Result<?> res);
 	/**
-	 * Adds an object of type Result<?> to the result list
+	 * Adds an object of type Result to the result list
 	 * @param <T> The type of the value
 	 * @param name name of the result
 	 * @param value the value of the result

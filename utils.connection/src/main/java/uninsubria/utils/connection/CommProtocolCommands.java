@@ -50,7 +50,7 @@ public enum CommProtocolCommands {
     /*---Methods---*/
     /**
      * Gets the command as a string. Every command is contained in angular brackets,
-     * for example: <ACTIVATION_CODE>
+     * for example: {@code <ACTIVATION_CODE>}
      *
      * @return the command string
      */
