@@ -15,7 +15,7 @@ public enum Ruleset {
     /**
      * Standard ruleset.
      */
-    STANDARD(Duration.ofSeconds(30), Duration.ofMinutes(3), Duration.ofMinutes(3), true, 5);
+    STANDARD(Duration.ofSeconds(30), Duration.ofMinutes(3), Duration.ofMinutes(3), true, 50);
 
     /*---Fields---*/
 
