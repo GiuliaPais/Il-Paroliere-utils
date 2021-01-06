@@ -20,7 +20,7 @@ enum TermTypesAbbreviations {
 	/**
 	 * Internal structure holding a pair key-value where keys are abbreviations and values are corresponding types.
 	 */
-	private HashMap<String, String> abbrev;
+	private final HashMap<String, String> abbrev;
 	
 	/*---Constructor---*/
 	/**
@@ -29,8 +29,8 @@ enum TermTypesAbbreviations {
 	 * @param abb A series of abbreviations (same order as TermType types)
 	 */
 	TermTypesAbbreviations(TermType tType, String...abb) {
-		List<String> abbr = Arrays.asList(abb);
-		abbrev = new HashMap<String, String>(abb.length, 1.0f);
+		String[] abbr = abb;
+		abbrev = new HashMap<>(abb.length, 1.0f);
 		ListIterator<String> iter = tType.getWordTypes().listIterator();
 		for (String a : abbr) {
 			abbrev.put(a, iter.next());

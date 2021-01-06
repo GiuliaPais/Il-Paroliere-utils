@@ -34,7 +34,6 @@
     <module>utils.managers.api</module>
       <module>utils.connection</module>
       <module>utils.business</module>
-      <module>utils.chronometer</module>
       <module>utils.security</module>
       <module>utils.ruleset</module>
   </modules>

@@ -17,6 +17,9 @@ public class GameScore implements Serializable {
     private String winner;
 
     /*---Constructors---*/
+    /**
+     * Instantiates a new GameScore.
+     */
     public GameScore() {
         this.scores = new Hashtable<>();
         this.matchWords = new Hashtable<>();
@@ -24,31 +27,69 @@ public class GameScore implements Serializable {
     }
 
     /*---Methods---*/
+    /**
+     * Gets scores.
+     *
+     * @return the scores
+     */
     public Hashtable<String, Integer[]> getScores() {
         return scores;
     }
 
+    /**
+     * Gets match words.
+     *
+     * @return the match words
+     */
     public Hashtable<String, Word[]> getMatchWords() {
         return matchWords;
     }
 
+    /**
+     * Gets winner.
+     *
+     * @return the winner
+     */
     public String getWinner() {
         return winner;
     }
 
+    /**
+     * Sets scores for player.
+     *
+     * @param playerId   the player id
+     * @param matchScore the match score
+     * @param gameScore  the game score
+     * @param wordList   the word list
+     */
     public void setScoresForPlayer(String playerId, Integer matchScore, Integer gameScore, Word[] wordList) {
         scores.put(playerId, new Integer[] {matchScore, gameScore});
         matchWords.put(playerId, wordList);
     }
 
+    /**
+     * Sets winner.
+     *
+     * @param winner the winner
+     */
     public void setWinner(String winner) {
         this.winner = winner;
     }
 
+    /**
+     * Sets scores.
+     *
+     * @param scores the scores
+     */
     public void setScores(Hashtable<String, Integer[]> scores) {
         this.scores = scores;
     }
 
+    /**
+     * Sets match words.
+     *
+     * @param matchWords the match words
+     */
     public void setMatchWords(Hashtable<String, Word[]> matchWords) {
         this.matchWords = matchWords;
     }

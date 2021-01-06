@@ -31,26 +31,56 @@ public class WordGameStatResult implements Serializable {
     }
 
     /*---Methods---*/
+    /**
+     * Gets game.
+     *
+     * @return the game
+     */
     public UUID getGame() {
         return game;
     }
 
+    /**
+     * Sets game.
+     *
+     * @param game the game
+     */
     public void setGame(UUID game) {
         this.game = game;
     }
 
+    /**
+     * Gets word.
+     *
+     * @return the word
+     */
     public String getWord() {
         return word;
     }
 
+    /**
+     * Sets word.
+     *
+     * @param word the word
+     */
     public void setWord(String word) {
         this.word = word;
     }
 
+    /**
+     * Gets points.
+     *
+     * @return the points
+     */
     public Integer getPoints() {
         return points;
     }
 
+    /**
+     * Sets points.
+     *
+     * @param points the points
+     */
     public void setPoints(Integer points) {
         this.points = points;
     }

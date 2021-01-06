@@ -23,11 +23,30 @@ public class Lobby implements Serializable {
     private Ruleset ruleset;
     private LobbyStatus status;
 
+    /**
+     * The enum Lobby status.
+     */
     public enum LobbyStatus{
-        OPEN, CLOSED
+        /**
+         * Open lobby status.
+         */
+        OPEN,
+        /**
+         * Closed lobby status.
+         */
+        CLOSED
     }
 
     /*---Constructors---*/
+    /**
+     * Instantiates a new Lobby.
+     *
+     * @param roomName   the room name
+     * @param numPlayers the num players
+     * @param language   the language
+     * @param ruleset    the ruleset
+     * @param status     the status
+     */
     public Lobby(String roomName, int numPlayers, Language language, Ruleset ruleset, LobbyStatus status) {
         this.roomId = UUID.randomUUID();
         this.roomName = roomName;
@@ -37,6 +56,16 @@ public class Lobby implements Serializable {
         this.status = status;
     }
 
+    /**
+     * Instantiates a new Lobby.
+     *
+     * @param roomId     the room id
+     * @param roomName   the room name
+     * @param numPlayers the num players
+     * @param language   the language
+     * @param ruleset    the ruleset
+     * @param status     the status
+     */
     public Lobby(UUID roomId, String roomName, int numPlayers, Language language, Ruleset ruleset, LobbyStatus status) {
         this.roomId = roomId;
         this.roomName = roomName;
@@ -47,47 +76,103 @@ public class Lobby implements Serializable {
     }
 
     /*---Methods---*/
+
+    /**
+     * Gets room id.
+     *
+     * @return the room id
+     */
     public UUID getRoomId() {
         return roomId;
     }
 
+    /**
+     * Gets room name.
+     *
+     * @return the room name
+     */
     public String getRoomName() {
         return roomName;
     }
 
+    /**
+     * Sets room name.
+     *
+     * @param roomName the room name
+     */
     public void setRoomName(String roomName) {
         this.roomName = roomName;
     }
 
+    /**
+     * Gets num players.
+     *
+     * @return the num players
+     */
     public int getNumPlayers() {
         return numPlayers;
     }
 
+    /**
+     * Sets num players.
+     *
+     * @param numPlayers the num players
+     */
     public void setNumPlayers(int numPlayers) {
         this.numPlayers = numPlayers;
     }
 
+    /**
+     * Gets language.
+     *
+     * @return the language
+     */
     public Language getLanguage() {
         return language;
     }
 
 
+    /**
+     * Sets language.
+     *
+     * @param language the language
+     */
     public void setLanguage(Language language) {
         this.language = language;
     }
 
+    /**
+     * Gets ruleset.
+     *
+     * @return the ruleset
+     */
     public Ruleset getRuleset() {
         return ruleset;
     }
 
+    /**
+     * Sets ruleset.
+     *
+     * @param ruleset the ruleset
+     */
     public void setRuleset(Ruleset ruleset) {
         this.ruleset = ruleset;
     }
 
+    /**
+     * Gets status.
+     *
+     * @return the status
+     */
     public LobbyStatus getStatus() {
         return status;
     }
 
+    /**
+     * Sets status.
+     *
+     * @param status the status
+     */
     public void setStatus(LobbyStatus status) {
         this.status = status;
     }

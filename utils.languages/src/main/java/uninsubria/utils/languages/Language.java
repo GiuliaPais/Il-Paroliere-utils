@@ -22,29 +22,29 @@ public enum Language {
 	/**
 	 * The name of the language.
 	 */
-	private String language;
+	private final String language;
 	/**
 	 * Path to the dictionary file.
 	 */
-	private String dict;
+	private final String dict;
 	/**
 	 * Encoding charset for the dictionary file.
 	 */
-	private Charset encoding;
+	private final Charset encoding;
 	/**
 	 * Reference to the TermType object.
 	 */
-	private TermType termTypes;
+	private final TermType termTypes;
 	/**
 	 * Reference to the ValidType object.
 	 */
-	private ValidType validTypes;
+	private final ValidType validTypes;
 	/**
 	 * Reference to the TermTypesAbbreviations object.
 	 */
-	private TermTypesAbbreviations abbreviations;
+	private final TermTypesAbbreviations abbreviations;
 	
-	private String localeID;
+	private final String localeID;
 	/*---Constructor---*/
 	/**
 	 * Instantiates an object of type Language

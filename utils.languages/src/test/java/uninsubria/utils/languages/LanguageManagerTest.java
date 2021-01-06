@@ -1,6 +1,3 @@
-/**
- * 
- */
 package uninsubria.utils.languages;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -21,7 +18,7 @@ import org.junit.jupiter.api.Test;
  *
  */
 class LanguageManagerTest {
-	private LanguageManager lman = new LanguageManager(Language.ITALIAN);
+	private final LanguageManager lman = new LanguageManager(Language.ITALIAN);
 
 	@Test
 	public void testGetDictionaryFile() throws URISyntaxException {

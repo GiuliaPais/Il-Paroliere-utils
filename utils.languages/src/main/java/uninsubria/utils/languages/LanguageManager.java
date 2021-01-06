@@ -53,7 +53,7 @@ public class LanguageManager {
 	 * @throws URISyntaxException If issues were found with the conversion of URL to URI
 	 */
 	public File getDictionaryFile() throws URISyntaxException {
-		File dict = null;
+		File dict;
 		dict = this.getAssociatedFile(lang.getDict());
 		return(dict);
 	}
@@ -105,8 +105,7 @@ public class LanguageManager {
 	 */
 	public ResourceBundle getResourcesBundle() {
 		Locale loc = lang.getLocale();
-		ResourceBundle res = ResourceBundle.getBundle("gui_localization.guitext", loc);
-		return res;
+		return ResourceBundle.getBundle("gui_localization.guitext", loc);
 	}
 
 	/**

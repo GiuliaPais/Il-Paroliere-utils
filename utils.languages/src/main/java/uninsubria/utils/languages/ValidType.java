@@ -17,7 +17,7 @@ enum ValidType {
 	/**
 	 * The list of types
 	 */
-	private List<String> types;
+	private final List<String> types;
 	
 	/*---Constructor---*/
 	/**

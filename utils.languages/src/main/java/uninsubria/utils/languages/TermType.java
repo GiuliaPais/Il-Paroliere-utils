@@ -19,11 +19,11 @@ enum TermType {
 	/**
 	 * String representing the type attributed to any other type of term that is not contained in types
 	 */
-	private String other;
+	private final String other;
 	/**
 	 * The list of types
 	 */
-	private List<String> types;
+	private final List<String> types;
 	
 	/*---Constructor---*/
 	/**

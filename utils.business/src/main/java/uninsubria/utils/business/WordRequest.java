@@ -13,9 +13,10 @@ import java.util.Objects;
 public class WordRequest implements Serializable {
     /*---Fields---*/
     private String word;
-    private int matchRequested;
+    private final int matchRequested;
 
     /*---Constructors---*/
+
     /**
      * Instantiates a new Word request.
      *
@@ -28,14 +29,29 @@ public class WordRequest implements Serializable {
     }
 
     /*---Methods---*/
+    /**
+     * Gets word.
+     *
+     * @return the word
+     */
     public String getWord() {
         return word;
     }
 
+    /**
+     * Sets word.
+     *
+     * @param word the word
+     */
     public void setWord(String word) {
         this.word = word;
     }
 
+    /**
+     * Gets match requested.
+     *
+     * @return the match requested
+     */
     public int getMatchRequested() {
         return matchRequested;
     }

@@ -11,14 +11,20 @@ import java.time.Duration;
 public enum Ruleset {
 
     /*---Enum constants---*/
-    STANDARD(Duration.ofSeconds(30), Duration.ofMinutes(3), Duration.ofMinutes(3), true, 50);
+
+    /**
+     * Standard ruleset.
+     */
+    STANDARD(Duration.ofSeconds(30), Duration.ofMinutes(3), Duration.ofMinutes(3), true, 5);
 
     /*---Fields---*/
+
     private Duration timeToStart, timeToMatch, timeToWaitFromMatchToMatch;
     private boolean interruptIfSomeoneLeaves;
     private int maxScoreToWin;
 
     /*---Constructors---*/
+
     Ruleset(Duration timeToStart, Duration timeToMatch, Duration timeToWaitFromMatchToMatch,
             boolean interruptIfSomeoneLeaves, int maxScoreToWin) {
         this.timeToStart = timeToStart;
@@ -30,29 +36,46 @@ public enum Ruleset {
 
     /*---Methods---*/
     /**
-     * Il booleano che stabilisce se interrompere il gioco quando qualcuno abbandona o meno.
-     * @return il booleano per interrompere o meno il game.
+     * Should the game interrupt if someone leaves?
+     *
+     * @return the boolean
      */
     public boolean interruptIfSomeoneLeaves() {
         return interruptIfSomeoneLeaves;
     }
 
     /**
-     * Il numero che stabilisce il risultato da raggiungere per terminare il game.
-     * @return l'int da raggiungere per concludere il game.
+     * Gets the minimum amount of points to declare a winner.
+     *
+     * @return the max score to win
      */
     public int getMaxScoreToWin() {
         return maxScoreToWin;
     }
 
+    /**
+     * Gets the duration of the pre-game timer.
+     *
+     * @return the time to start
+     */
     public Duration getTimeToStart() {
         return timeToStart;
     }
 
+    /**
+     * Gets the duration of the match timer.
+     *
+     * @return the time to match
+     */
     public Duration getTimeToMatch() {
         return timeToMatch;
     }
 
+    /**
+     * Gets the duration of the timeout between matches.
+     *
+     * @return the time to wait from match to match
+     */
     public Duration getTimeToWaitFromMatchToMatch() {
         return timeToWaitFromMatchToMatch;
     }

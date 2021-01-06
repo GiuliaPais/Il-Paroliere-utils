@@ -17,6 +17,7 @@ public class PlayerStatResult implements Serializable {
     private Double score;
 
     /*---Constructors---*/
+
     /**
      * Instantiates a new Player stat result.
      *
@@ -29,18 +30,38 @@ public class PlayerStatResult implements Serializable {
     }
 
     /*---Methods---*/
+    /**
+     * Gets player id.
+     *
+     * @return the player id
+     */
     public String getPlayerID() {
         return playerID;
     }
 
+    /**
+     * Sets player id.
+     *
+     * @param playerID the player id
+     */
     public void setPlayerID(String playerID) {
         this.playerID = playerID;
     }
 
+    /**
+     * Gets score.
+     *
+     * @return the score
+     */
     public Double getScore() {
         return score;
     }
 
+    /**
+     * Sets score.
+     *
+     * @param score the score
+     */
     public void setScore(Double score) {
         this.score = score;
     }
